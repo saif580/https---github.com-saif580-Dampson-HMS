@@ -23,7 +23,7 @@ const BookingForm = ({ onSubmit, onClose }) => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:7010/appointments/book", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/appointments/book`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const BookingForm = ({ onSubmit, onClose }) => {
       try {
         const jsonResponse = JSON.parse(responseData);
         if (response.ok) {
-          toast.success(jsonResponse.message);
+          toast.success(jsonResponse.message || "Booking confirmed, check your email for booking confirmation.");
           onSubmit(jsonResponse);
           setTimeout(() => {
             onClose(); // Close the modal after 5 seconds
@@ -54,12 +54,16 @@ const BookingForm = ({ onSubmit, onClose }) => {
             onClose(); // Close the modal after 5 seconds
           }, 5000);
         } else {
-          toast.error("Booking failed, please try again.");
+          toast.error(responseData);
         }
       }
     } catch (error) {
       console.error("Error:", error);
-      toast.error(`An error occurred: ${error.message}`);
+      if (error.message.includes("503")) {
+        toast.error("Service is currently unavailable. Please try again later.");
+      } else {
+        toast.error(`An error occurred: ${error.message}`);
+      }
     } finally {
       setLoading(false);
     }

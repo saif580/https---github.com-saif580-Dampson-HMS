@@ -17,7 +17,7 @@ const LoginForm = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:7010/authenticate", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/authenticate`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -27,12 +27,14 @@ const LoginForm = () => {
 
       if (response.ok) {
         const data = await response.json();
-        const { token, role } = data;
-        login(username, token, role);
+        const { token, role, userId } = data; // Ensure userId is part of the response
+        login(username, token, role, userId); // Pass userId to the login function
         toast.success("Login successful!");
         navigate(role === 'ROLE_DOCTOR' ? '/doctordashboard' : '/dashboard');
+      } else if (response.status === 401) {
+        toast.error("Incorrect username or password. Please try again.");
       } else if (response.status === 500) {
-        toast.error("Internal server error. Please try again later.");
+        toast.error("Incorrect username or password. Please try again.");
       } else {
         const errorData = await response.json();
         toast.error(`Login failed: ${errorData.message}`);

@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Dampson-HMS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+Dampson-HMS (Hospital Management System) is a comprehensive software solution designed to streamline the operations and management of clinic and healthcare institutions. Our system integrates various functionalities necessary for effective hospital management, including patient management, appointment scheduling, billing, and more.
 
-## Available Scripts
+![Dampson-HMS](https://github.com/saif580/Dampson-HMS/assets/29210607/28549df2-f72b-47c0-b1cb-a89ba5e7404a)
 
-In the project directory, you can run:
+## Project Management and Documentation
 
-### `npm start`
+### JIRA
+For project management, task tracking, and timeline overview, please refer to our JIRA board:
+[DMPSN JIRA Board](https://dampson.atlassian.net/jira/software/projects/DMPSN/boards/5/timeline)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Confluence
+For detailed documentation, guidelines, and collaboration, visit our Confluence space:
+[Dampson-HMS Confluence](https://dampson.atlassian.net/wiki/spaces/DampsonHMS/overview)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Features
+- **Patient Management**: Efficiently manage patient data and history.
+- **Appointment Scheduling**: Streamline the scheduling process for both patients and healthcare providers.
+- **Billing and Invoicing**: Automated billing processes to ensure accurate and timely payments.
+- **Medical record service**: Keep track of medical records.
+- **Reporting and Analytics**: Generate detailed reports and analytics for better decision-making.

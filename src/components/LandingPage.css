@@ -40,7 +40,28 @@ body {
   font-weight: 300;
   color: #444;
   line-height: 1.9;
-  background-color: #ffffff;
+  background-color: #EBEFF2;
+}
+
+.header__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.header__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  z-index: 0;
 }
 
 /* GENERAL ELEMENTS */
@@ -76,8 +97,9 @@ body {
 }
 
 .btn {
+  width: auto;
   display: inline-block;
-  background-color: var(--gradient-primaryloanbutton);
+  background-color: #999;
   font-size: 1.6rem;
   font-family: inherit;
   font-weight: 500;
@@ -89,7 +111,7 @@ body {
 }
 
 .btn:hover {
-  background-color: var(--gradient-primaryloanbuttondark);
+  background-color: #444;
 }
 
 .btn--text {
@@ -117,7 +139,7 @@ body {
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-radius: 3rem;
-  background: #777;
+  background: #999;
   text-decoration: none; /* Ensure links look like buttons */
   cursor: pointer;
   transition: all 0.3s;
@@ -273,7 +295,7 @@ img {
     padding: 1rem;
     font-size: 1.7rem;
     color: #222;
-    background: #777;
+    background: #999;
     border: none;
     border-radius: 2rem;
     cursor: pointer;
@@ -419,7 +441,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--gradient-primaryloanbuttondark);
+  background: var(--gradient-primaryloanbutton);
   height: 5.5rem;
   width: 5.5rem;
   border-radius: 50%;
@@ -790,6 +812,34 @@ h4 {
   z-index: 100;
   transition: all 0.5s;
 }
+
+.modal__form select {
+  font-size: 1.7rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  color: #444;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMzMzMzMzIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNCAxNCI+PHBhdGggZD0iTTEgNEwwIDVsNiA2IDYtNkwxMyA0TDcgOGwtNi00ek0wIDBoMTR2MTRIMFYweiIvPjwvc3ZnPg==');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+.modal__form select:focus {
+  border-color: #5ec576;
+  outline: none;
+}
+
+/* Add some styles to the options */
+.modal__form select option {
+  padding: 1rem;
+  font-size: 1.7rem;
+}
+
 
 .modal__header {
   font-size: 3.25rem;
