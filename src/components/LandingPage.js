@@ -1,5 +1,3 @@
-// src/components/LandingPage.js
-
 import React, { useEffect, useState } from "react";
 import BookingForm from "./BookingForm";
 import "./LandingPage.css";
